@@ -1,0 +1,142 @@
+1.	Synchronization (Đồng bộ hóa) là gì?
+
+Synchronization là khả năng điều khiển truy cập của nhiều Thread tới nguồn đã chia sẻ. 
+Từ khóa synchronized trong Java cung cấp locking để đảm bảo sự truy cập tương hỗ mang tính loại trừ của nguồn đã chia sẻ và ngăn cản Data Race (Tranh đoạt dữ liệu).
+
+2. ClassLoader là gì?
+
+ClassLoader là một đối tượng mà đảm nhiệm việc tải các lớp. 
+Lớp ClassLoader là một lớp abstract.
+
+3. Tại sao chúng ta cần các lớp wrapper?
+
+Chúng ta có thể truyền chúng ở dạng các tham số phương thức khi một phương thức chờ đợi một đối tượng. 
+Nó cũng cung cấp các phương thức tiện ích.
+
+4.Điểm khác nhau giữa Error và Exception?
+
+Một Error là một điều kiện không thể cứu chữa xuất hiện tại runtime, 
+	ví dụ OutOfMemory error. 
+Các Exception là các điều kiện mà xuất hiện là do input không phù hợp, hoặc sai,… 
+	ví dụ FileNotFoundException sẽ bị ném nếu file đã cho không tồn tại.
+	
+5. Khi nào sử dụng ArrayList và LinkedList?
+
+Nếu bạn cần thường xuyên thêm và xóa các phần tử từ giữa danh sách và chỉ truy cập các phần tử theo dãy, thì LinkedList nên được sử dụng.
+Nếu bạn cần hỗ trợ truy cập ngẫu nhiên, mà không chèn hoặc xóa các phần tử từ bất kỳ vị trí nào khác ngoài vị trí cuối, thì nên sử dụng ArrayList.
+
+6. Trình bày Externalizable Interface?
+
+Externalizable là một Interface chứa hai phương thức readExternal và writeExternal. 
+Hai phương thức này cung cấp cho bạn một điều khiển thông qua kỹ thuật Serialization.
+
+7. Trình bày Enumeration?
+
+Một Enumeration là một Interface chứa các phương thức để truy cập cấu trúc dữ liệu lớp dưới mà từ đó Enumeration được thu nhận. 
+Nó cho phép sự truy cập liên tiếp tới tất cả phần tử được lưu trữ trong Collection đó.
+
+8.ĐIỂM KHÁC NHAU GIỮA INNER CLASS VÀ NESTED CLASS?
+
+Khi một lớp được định nghĩa bên trong một phạm vi của lớp khác, thì nó trở thành Inner Class. 
+Nếu Access Modifier của Inner Class là static, thì nó trở thành Nested Class.
+
+9. Khi nào từ khóa throws được sử dụng?
+Nếu một phương thức không xử lý một Checked Exception, phương thức phải được khai báo với từ khóa throws. 
+Từ khóa throws xuất hiện ở phần cuối một phương thức.
+
+10. Khi nào từ khóa throw được sử dụng?
+Một Exception có thể được ném, hoặc bởi được thuyết minh hoặc một Exception mà bạn vừa bắt, bởi sử dụng từ khóa throw.
+
+11. Đa luồng (Multi-Thread)?
+Một chương trình đa luồng bao gồm hai hoặc nhiều phần mà có thể chạy đồng thời. 
+Mỗi phần của chương trình đó được gọi là một Thread, và một Thread xác định một trình thực thi khác nhau.
+
+12. Serializable và Deserializable trong Java
+
+13. Điểm khác nhau giữa yield và sleep?
+Khi một tác vụ triệu hồi phương thức yield() của nó, nó chuyển thành trạng thái sẵn sàng. 
+Khi một tác vụ triệu hồi phương thức sleep() của nó, nó chuyển sang trạnh thái đợi.
+
+14.Tại sao lớp Vector được sử dụng?
+Lớp Vector cung cấp khả năng để triển khai mọt mảng có thể mở rộng của các đối tượng. 
+Vector tỏ ra rất hữu ích nếu bạn không biết trước kích cỡ của mảng, hoặc nếu bạn chỉ cần một mảng mà có thể thay đổi kích cỡ trong thời gian sống của một chương trình.
+
+15. Sự khác nhau giữa throw và throws trong java
+
+
+1)	Từ khóa throw trong java được sử dụng để ném ra một ngoại lệ rõ ràng.
+	Từ khóa throws trong java được sử dụng để khai báo một ngoại lệ.
+	
+2)	Ngoại lệ checked không được truyền ra nếu chỉ sử dụng từ khóa throw.
+	Ngoại lệ checked được truyền ra ngay cả khi chỉ sử dụng từ khóa throws
+	
+3)	Sau throw là một instance.	
+	Sau throws là một hoặc nhiều class.
+	
+4)	Throw được sử dụng trong phương thức.	
+	Throws được khai báo ngay sau dấu đóng ngoặc đơn của phương thức.
+	
+5)	Bạn không thể throw nhiều exceptions.	
+	Bạn có thể khai báo nhiều exceptions, Ví dụ:
+	public void method()throws IOException,SQLException.
+	
+16. Lớp TreeSet trong java implements giao diện Set sử dụng cấu trúc cây để lưu trữ các phần tử.
+	Nó kế thừa lớp AbstractSet và implements giao diện NavigableSet. 
+	Các đối tượng của lớp TreeSet được lưu trữ theo thứ tự tăng dần.
+
+****Các điểm quan trọng về lớp TreeSet trong java là:
+	Chỉ chứa các phần tử duy nhất giống như HashSet.
+	Thời gian truy xuất nhanh.
+	Duy trì thứ tự tăng dần.
+	
+17. Set (tập hợp) và đặc điểm của Set
+	Set hay còn gọi là bộ hoặc tập hợp, mặc dù cùng mang nghĩa là tập hợp nhưng khác với Collection thì trong Set các phần tử là duy nhất cũng có nghĩa là Set không chứa các phần tử trùng lặp. 
+	Chính vì vậy Set có một số đặc điểm sau:
+	- Các phần tử trong set là không trùng lặp
+	- Cho phép chứa phần tử null, nhưng chỉ có tối đa một phần tử null trong Set
+	- Nếu thêm 1 phần tử đã tồn tại trong Set vào Set thì trong Set vẫn chỉ chứa 1 phần tử mà thôi.
+	
+18. HashSet & LinkedHashSet & EnumSet
+**	HashSet là class thực thi giao diện Set Interface dựa trên cấu trúc dữ liệu bảng băm (Hash Table) cho phép việc truy câp tìm kiếm (contains), thêm (add), xóa (remove) các phần tử trong Set được thực thi với tốc độ O(1). 
+	Đây cũng là loại Set có tốc độ cao nhất.
+– 	Một điểm đáng chú ý là trong khi sử, Iterator của HashSet có thể sẽ throw ConcurrentModificationException nếu bạn thay đổi nội dung HashSet (thêm hoặc xóa bớt phần tử) sau khi Iterator đã được tạo ra.
+
+**	LinkedHashSet là sự kết hợp giữ bảng băm (Hash table) và danh sách liên kết (linked list) để thực thi giao diện Set Interface. 
+	Tuy được kế thừa từ HashSet nhưng khác so với HashSet đó là các phần tử trong LinkedHashSet được lưu giữ dưới dạng danh sách liên kết 2 chiều.
+– 	Một điều cần chú ý là Iterator của LinkedHashSet cho chúng ta các phần tử theo thứ tự thời gian chèn vào Set (insertion-order), phần tử nào được thêm vào trước sẽ nằm trước, và trường hợp thêm lại một phần tử đã có trong Set sẽ không ảnh hưởng tới thứ tự trong Iterator.
+
+**	EnumSet cũng là 1 class thực thi giao diện Set Interface, 
+	tuy nhiên thay vì việc các phần tử trong Set là các đối tượng của một lớp nào đó thì các phần tử trong EnumSet lại các giá trị Enum.
+	
+19. Set Interface và các phương thức bên trong
+	Set Inteface là một interface con được kế thừa từ Collection Interface vì vậy nó có đầy đủ các phương thức của Collection Interface, hơn nữa Set Interface cũng không có thêm 1 phương thức nào vì vậy các bạn có thể xem lại phần 2: Collection Interface để hiểu rõ hơn về các phương thức của Set Interface.
+	Chú ý: cách làm việc của 2 phương thức add() và addAll() trong Set Interface sẽ hơi khác với trong Collection Interface. Đó là với Set Interface, 2 phương thức này sẽ chỉ thêm phần tử vào trong Set nếu như phần tử đó chưa có trong Set.
+	
+20. Nested class (lớp lồng nhau) là gì?
+21.Mục đích của phương thức toString() trong java là gì?
+22. Tại sao các đối tượng String trong java là immutable?	
+23. Immutable String trong java
+	Trong java đối tượng string là bất biến(immutable). Bất biến có nghĩa là không thể thay đổi
+24. Sự khác nhau giữa HashSet và TreeSet là gì?
+25. Sự khác nhau giữa ArrayList và LinkedList là gì?
+**  Cả hai lớp này đều là lớp không đồng bộ (non-synchronized).
+
+	1) 	ArrayList nội bộ sử dụng mảng động để lưu trữ các phần tử.	
+		LinkedList nội bộ sử dụng danh sách liên kết doubly để lưu trữ các phần tử.
+		
+	2) 	Thao tác với ArrayList là chậm bởi vì nó sử dụng nội bộ mảng. 
+		Nếu bất kỳ phần tử nào được xoá khỏi mảng, tất cả các bit được chuyển trong bộ nhớ.	
+		Thao tác với LinkedList là nhanh hơn so với ArrayList bởi vì nó sử dụng danh sách liên kết doubly do đó không cần chuyển đổi bit nào trong bộ nhớ.
+		
+	3) 	Lớp ArrayList trong java chỉ có thể hoạt động như một list vì nó chỉ implements giao tiếp List.	
+		Lớp LinkedList trong java có thể hoạt động như một list và queue(hàng đợi) vì nó implements các giao tiếp List và Deque.
+		
+	4)	ArrayList là tốt hơn trong việc lưu trữ và truy cập dữ liệu.	
+		LinkedList là tốt hơn trong việc thao tác dữ liệu.
+		
+26. legacy class
+27. Marker interface in Java
+28.	String
+****String object được lưu trong một vùng bộ nhớ đặc biệt được biết đến là string constant pool
+	tại sao Java lại phải sử dụng đến khái niệm string literal
+30. Hạn chế khi dùng mảng là gì?
